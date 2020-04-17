@@ -1,26 +1,27 @@
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
 body {
     margin: 0;
 }
 
 #canvas {
-    background: grey;
     display: block;
 }
 
 .actions {
     position: fixed;
-    left: 0;
+    top: 0;
     bottom: 0;
 }
 
-.actions>#brush {
-    display: none;
-}
-
-.actions.x>#brush {
-    display: inline-block;
-}
-
-.actions.x>#eraser {
-    display: none;
+.actions svg{
+    width: 1.5em;
+    height: 1.5em;
+    fill: red;
 }

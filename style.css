@@ -18,10 +18,17 @@ body {
     position: fixed;
     top: 0;
     bottom: 0;
+    padding: 20px;
 }
 
 .actions svg{
     width: 1.5em;
     height: 1.5em;
+    transition: all 0.3s;
+    margin: 0 5px;
+}
+
+.actions svg.active{
     fill: red;
+    transform: scale(1.2);
 }

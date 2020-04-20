@@ -8,9 +8,13 @@ listenToUser(canvas)
 var eraserEnabled = false
 pen.onclick = function () {
     eraserEnabled = false
+    pen.classList.add('active')
+    eraser.classList.remove('active')
 }
 eraser.onclick = function () {
     eraserEnabled = true
+    eraser.classList.add('active')
+    pen.classList.remove('active')
 }
 
 
@@ -74,7 +78,7 @@ function listenToUser(canvas) {
 
         canvas.ontouchend = function (a) {
             using = false
-        }//00000000000000000000000000000000
+        }
     } else {
         canvas.onmousedown = function (a) {
             var x = a.clientX

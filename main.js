@@ -111,5 +111,4 @@ function listenToUser(canvas) {
             using = false
         }
     }
-
 }

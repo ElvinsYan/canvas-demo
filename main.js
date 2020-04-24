@@ -1,5 +1,6 @@
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
+var lineWidth = '3'
 
 autoSetCanvasSize(canvas)
 
@@ -15,6 +16,20 @@ eraser.onclick = function () {
     eraserEnabled = true
     eraser.classList.add('active')
     pen.classList.remove('active')
+}
+
+clear.onclick = function () {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+download.onclick = function () {
+    var url = canvas.toDataURL("image/png")
+    var a = document.createElement('a')
+    document.body.appendChild(a)
+    a.href = url
+    a.download = 'myPix'
+    a.target = '_blank'
+    a.click()
 }
 
 black.onclick = function () {
@@ -53,6 +68,15 @@ blue.onclick = function () {
     blue.classList.add('active')
 }
 
+thin.onclick = function () {
+    lineWidth = '3'
+}
+
+thick.onclick = function () {
+    lineWidth = '6'
+}
+
+
 /***********/
 
 function autoSetCanvasSize(canvas) {
@@ -70,8 +94,8 @@ function autoSetCanvasSize(canvas) {
 
 function drawLine(x1, y1, x2, y2) {
     context.beginPath()
-    context.lineWidth = '6px'
-    context.moveTo(x1, y1)    
+    context.lineWidth = lineWidth
+    context.moveTo(x1, y1)
     context.lineTo(x2, y2)
     context.stroke()
     context.closePath()

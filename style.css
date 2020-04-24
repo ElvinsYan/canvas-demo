@@ -21,6 +21,10 @@ body {
 
 #canvas {
     display: block;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .actions {
@@ -72,6 +76,28 @@ body {
     background: blue;
 }
 
-.colors>li.active{
+.colors>li.active {
     transform: scale(1.2);
+}
+
+.sizes {
+    position: fixed;
+    right: 30px;
+    top: 20px;
+}
+
+.sizes>li {
+    margin: 20px 0;
+}
+
+.sizes>.thin {
+    height: 0;
+    width: 30px;
+    border-top: 2px solid black;
+}
+
+.sizes>.thick {
+    height: 0;
+    width: 30px;
+    border-top: 4px solid black;
 }

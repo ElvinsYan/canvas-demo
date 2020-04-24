@@ -1,3 +1,12 @@
+ol, ul {
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .icon {
     width: 1em;
     height: 1em;
@@ -7,7 +16,7 @@
 }
 
 body {
-    margin: 0;
+    overflow: hidden;
 }
 
 #canvas {
@@ -17,18 +26,52 @@ body {
 .actions {
     position: fixed;
     top: 0;
-    bottom: 0;
+    left: 0;
     padding: 20px;
 }
 
-.actions svg{
+.actions svg {
     width: 1.5em;
     height: 1.5em;
     transition: all 0.3s;
     margin: 0 5px;
 }
 
-.actions svg.active{
+.actions svg.active {
     fill: red;
+    transform: scale(1.2);
+}
+
+.colors {
+    position: fixed;
+    top: 50px;
+    left: 25px;
+}
+
+.colors>li {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 8px 0;
+    transition: all 0.3s;
+}
+
+.colors>li.black {
+    background: black;
+}
+
+.colors>li.red {
+    background: red;
+}
+
+.colors>li.green {
+    background: green;
+}
+
+.colors>li.blue {
+    background: blue;
+}
+
+.colors>li.active{
     transform: scale(1.2);
 }

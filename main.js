@@ -17,7 +17,41 @@ eraser.onclick = function () {
     pen.classList.remove('active')
 }
 
+black.onclick = function () {
+    context.fill = 'black'
+    context.strokeStyle = 'black'
+    black.classList.add('active')
+    red.classList.remove('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+}
 
+red.onclick = function () {
+    context.fill = 'red'
+    context.strokeStyle = 'red'
+    black.classList.remove('active')
+    red.classList.add('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+}
+
+green.onclick = function () {
+    context.fill = 'green'
+    context.strokeStyle = 'green'
+    black.classList.remove('active')
+    red.classList.remove('active')
+    green.classList.add('active')
+    blue.classList.remove('active')
+}
+
+blue.onclick = function () {
+    context.fill = 'blue'
+    context.strokeStyle = 'blue'
+    black.classList.remove('active')
+    red.classList.remove('active')
+    green.classList.remove('active')
+    blue.classList.add('active')
+}
 
 /***********/
 
@@ -36,7 +70,6 @@ function autoSetCanvasSize(canvas) {
 
 function drawLine(x1, y1, x2, y2) {
     context.beginPath()
-    context.strokeStyle = 'black'
     context.lineWidth = '6px'
     context.moveTo(x1, y1)    
     context.lineTo(x2, y2)
